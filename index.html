@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aqua Zone — Laghetti Koi, Biolaghi e Biopiscine | Tenero</title>
+    <meta
+      name="description"
+      content="Aqua Zone di Fabio Fontana — oltre 30 anni di esperienza nella realizzazione di laghetti koi, biolaghi e biopiscine in Ticino."
+    />
+    <!-- BOZZA: togliere questa riga quando il sito va online per davvero -->
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="site-header" id="siteHeader">
+      <a class="brand" href="#hero" aria-label="Aqua Zone">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <path d="M12 2C12 2 5 9.5 5 14.5a7 7 0 0 0 14 0C19 9.5 12 2 12 2Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Aqua Zone</strong>
+          <small>Koi Shop &amp; Ponds</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navigazione principale">
+        <a href="#servizi" data-i18n="nav.services">Servizi</a>
+        <a href="#chi-siamo" data-i18n="nav.about">Chi siamo</a>
+        <a href="#realizzazioni" data-i18n="nav.projects">Realizzazioni</a>
+        <a href="#processo" data-i18n="nav.process">Come lavoriamo</a>
+        <a href="#contatti" class="nav-cta" data-i18n="nav.contact">Contattaci</a>
+      </nav>
+
+      <div class="lang-switch" id="langSwitch" role="group" aria-label="Lingua / Sprache / Langue / Language">
+        <button type="button" data-lang="it" class="active">IT</button>
+        <button type="button" data-lang="de">DE</button>
+        <button type="button" data-lang="fr">FR</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <img src="img/hero.jpg" alt="" />
+        </div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <span class="eyebrow reveal" data-i18n="hero.eyebrow">Tenero · Ticino · dal 1990</span>
+          <h1 class="reveal" data-i18n-html="hero.title">
+            Usiamo l'acqua per dare vita ai <span class="accent">vostri sogni</span>
+          </h1>
+          <p class="hero-lead reveal" data-i18n="hero.lead">
+            Laghetti koi, biolaghi e biopiscine realizzati su misura. Oltre trent'anni di passione,
+            dal primo laghetto fai-da-te a un giardino acquatico che diventa il cuore della vostra casa.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#realizzazioni" class="btn btn-primary" data-i18n="hero.cta1">Guarda le realizzazioni</a>
+            <a href="#contatti" class="btn btn-ghost" data-i18n="hero.cta2">Richiedi un sopralluogo</a>
+          </div>
+          <div class="hero-stats reveal">
+            <div><strong data-count="30" data-suffix="+">0</strong><span data-i18n="hero.stat1">anni di esperienza</span></div>
+            <div><strong data-count="250" data-suffix="+">0</strong><span data-i18n="hero.stat2">laghetti realizzati</span></div>
+            <div><strong data-count="100" data-suffix="%">0</strong><span data-i18n="hero.stat3">su misura</span></div>
+          </div>
+        </div>
+        <a href="#servizi" class="scroll-hint" aria-label="Scroll"><span></span></a>
+      </section>
+
+      <!-- SERVIZI -->
+      <section class="section" id="servizi">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="serv.kicker">Cosa facciamo</span>
+          <h2 data-i18n="serv.title">Soluzioni d'acqua, su misura per voi</h2>
+          <p data-i18n="serv.sub">Dalla progettazione alla manutenzione, seguiamo ogni fase con la cura di chi ha trasformato una passione in mestiere.</p>
+        </div>
+
+        <div class="cards">
+          <a class="card card-link reveal" href="servizio.html?s=koi">
+            <div class="card-photo"><img src="img/card-koi.jpg" alt="Laghetti koi" loading="lazy" /></div>
+            <div class="card-body">
+              <h3 data-i18n="serv.koi.t">Laghetti Koi</h3>
+              <p data-i18n="serv.koi.d">Lagune per carpe koi con filtraggio professionale e profondità ideale per esemplari sani e longevi.</p>
+              <span class="card-more" data-i18n="serv.more">Scopri di più →</span>
+            </div>
+          </a>
+          <a class="card card-link reveal" href="servizio.html?s=bio">
+            <div class="card-photo"><img src="img/card-bio.jpg" alt="Biolaghi" loading="lazy" /></div>
+            <div class="card-body">
+              <h3 data-i18n="serv.bio.t">Biolaghi</h3>
+              <p data-i18n="serv.bio.d">Specchi d'acqua naturali con equilibrio biologico autosufficiente, piante acquatiche e zone di rigenerazione.</p>
+              <span class="card-more" data-i18n="serv.more">Scopri di più →</span>
+            </div>
+          </a>
+          <a class="card card-link reveal" href="servizio.html?s=pool">
+            <div class="card-photo"><img src="img/card-pool.jpg" alt="Biopiscine" loading="lazy" /></div>
+            <div class="card-body">
+              <h3 data-i18n="serv.pool.t">Biopiscine</h3>
+              <p data-i18n="serv.pool.d">Il piacere di nuotare in acqua pulita senza cloro, integrata nel giardino come un laghetto naturale.</p>
+              <span class="card-more" data-i18n="serv.more">Scopri di più →</span>
+            </div>
+          </a>
+          <a class="card card-link reveal" href="servizio.html?s=reno">
+            <div class="card-photo"><img src="img/card-reno.jpg" alt="Ristrutturazioni" loading="lazy" /></div>
+            <div class="card-body">
+              <h3 data-i18n="serv.reno.t">Ristrutturazioni</h3>
+              <p data-i18n="serv.reno.d">Diamo nuova vita a bacini esistenti, rivedendo impermeabilizzazione, forma e impianti.</p>
+              <span class="card-more" data-i18n="serv.more">Scopri di più →</span>
+            </div>
+          </a>
+          <a class="card card-link reveal" href="servizio.html?s=filter">
+            <div class="card-photo"><img src="img/card-filter.jpg" alt="Sistemi di filtraggio" loading="lazy" /></div>
+            <div class="card-body">
+              <h3 data-i18n="serv.filter.t">Sistemi di filtraggio</h3>
+              <p data-i18n="serv.filter.d">Aggiornamento degli impianti con tecnologie moderne per acqua limpida e bassa manutenzione.</p>
+              <span class="card-more" data-i18n="serv.more">Scopri di più →</span>
+            </div>
+          </a>
+          <a class="card card-link reveal" href="servizio.html?s=maint">
+            <div class="card-photo"><img src="img/card-maint.jpg" alt="Manutenzione" loading="lazy" /></div>
+            <div class="card-body">
+              <h3 data-i18n="serv.maint.t">Manutenzione</h3>
+              <p data-i18n="serv.maint.d">Assistenza stagionale e interventi su misura per mantenere il vostro laghetto al meglio tutto l'anno.</p>
+              <span class="card-more" data-i18n="serv.more">Scopri di più →</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- CHI SIAMO -->
+      <section class="section section-split" id="chi-siamo">
+        <div class="split-media reveal">
+          <div class="media-frame">
+            <img src="img/about.jpg" alt="Carpe koi in un laghetto realizzato da Aqua Zone" loading="lazy" />
+          </div>
+          <div class="media-badge">
+            <strong>30+</strong>
+            <span data-i18n="about.badge">anni di<br />passione</span>
+          </div>
+        </div>
+        <div class="split-text reveal">
+          <span class="kicker" data-i18n="about.kicker">Chi siamo</span>
+          <h2 data-i18n="about.title">Una passione nata in giardino, cresciuta nel tempo</h2>
+          <p data-i18n="about.p1">Tutto è cominciato all'inizio degli anni '90, dal primo laghetto fai-da-te realizzato nel giardino di casa. Da lì, anno dopo anno, la passione per l'acqua e per le carpe koi è diventata un mestiere.</p>
+          <p data-i18n-html="about.p2">Oggi <strong>Aqua Zone di Fabio Fontana</strong> mette oltre trent'anni di esperienza al servizio di chi vuole un giardino acquatico curato in ogni dettaglio.</p>
+          <ul class="checklist">
+            <li data-i18n="about.li1">Progetti personalizzati, mai uguali</li>
+            <li data-i18n="about.li2">Materiali e impianti di qualità</li>
+            <li data-i18n="about.li3">Assistenza diretta dal titolare</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- REALIZZAZIONI -->
+      <section class="section" id="realizzazioni">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="proj.kicker">Realizzazioni</span>
+          <h2 data-i18n="proj.title">Alcuni dei nostri progetti</h2>
+          <p data-i18n="proj.sub">Ogni laghetto racconta una storia diversa. Sfoglia alcune realizzazioni recenti.</p>
+        </div>
+
+        <div class="gallery">
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="img/g1.jpg" alt="Laguna koi" loading="lazy" />
+            <figcaption><strong data-i18n="proj.g1t">Laguna Koi</strong><span data-i18n="proj.g1s">Filtraggio professionale</span></figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="img/g2.jpg" alt="Biolago naturale" loading="lazy" />
+            <figcaption><strong data-i18n="proj.g2t">Biolago naturale</strong><span data-i18n="proj.g2s">Equilibrio autosufficiente</span></figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="img/g3.jpg" alt="Biopiscina" loading="lazy" />
+            <figcaption><strong data-i18n="proj.g3t">Biopiscina</strong><span data-i18n="proj.g3s">Acqua senza cloro</span></figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="img/g4.jpg" alt="Giardino acquatico" loading="lazy" />
+            <figcaption><strong data-i18n="proj.g4t">Giardino acquatico</strong><span data-i18n="proj.g4s">Integrazione paesaggistica</span></figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="img/g5.jpg" alt="Cascata e ruscello" loading="lazy" />
+            <figcaption><strong data-i18n="proj.g5t">Cascata &amp; ruscello</strong><span data-i18n="proj.g5s">Movimento e ossigenazione</span></figcaption>
+          </figure>
+          <figure class="gallery-item reveal" tabindex="0">
+            <img src="img/g6.jpg" alt="Illuminazione serale" loading="lazy" />
+            <figcaption><strong data-i18n="proj.g6t">Illuminazione serale</strong><span data-i18n="proj.g6s">Atmosfera dopo il tramonto</span></figcaption>
+          </figure>
+        </div>
+        <p class="gallery-note reveal" data-i18n="proj.note">Immagini dimostrative. Nel sito finale verranno sostituite con le fotografie reali dei vostri lavori.</p>
+      </section>
+
+      <!-- PROCESSO -->
+      <section class="section" id="processo">
+        <div class="section-head reveal">
+          <span class="kicker" data-i18n="proc.kicker">Come lavoriamo</span>
+          <h2 data-i18n="proc.title">Dal sogno alla realtà, in quattro passi</h2>
+        </div>
+        <ol class="timeline">
+          <li class="reveal">
+            <span class="step-num">01</span>
+            <h3 data-i18n="proc.s1t">Sopralluogo</h3>
+            <p data-i18n="proc.s1d">Veniamo da voi per capire spazio, esigenze e desideri.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">02</span>
+            <h3 data-i18n="proc.s2t">Progetto</h3>
+            <p data-i18n="proc.s2d">Proponiamo una soluzione su misura, con materiali e tempistiche chiare.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">03</span>
+            <h3 data-i18n="proc.s3t">Realizzazione</h3>
+            <p data-i18n="proc.s3d">Costruiamo il vostro laghetto con cura artigianale, passo dopo passo.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">04</span>
+            <h3 data-i18n="proc.s4t">Manutenzione</h3>
+            <p data-i18n="proc.s4d">Vi seguiamo nel tempo perché l'acqua resti sempre limpida e sana.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- CONTATTI -->
+      <section class="section contact" id="contatti">
+        <div class="contact-inner">
+          <div class="contact-text reveal">
+            <span class="kicker" data-i18n="contact.kicker">Contatti</span>
+            <h2 data-i18n="contact.title">Parliamo del vostro progetto</h2>
+            <p data-i18n="contact.sub">Raccontateci la vostra idea: vi richiamiamo per fissare un sopralluogo gratuito.</p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="ci" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div><strong data-i18n="contact.addrLabel">Indirizzo</strong>6598 Tenero, Svizzera</div>
+              </li>
+              <li>
+                <span class="ci" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+                </span>
+                <div><strong data-i18n="contact.phoneLabel">Telefono</strong><a href="tel:+41764566961">076 456 69 61</a></div>
+              </li>
+              <li>
+                <span class="ci" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                </span>
+                <div><strong data-i18n="contact.emailLabel">Email</strong><a href="mailto:aquazone.ch@gmail.com">aquazone.ch@gmail.com</a></div>
+              </li>
+              <li>
+                <span class="ci" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                <div><strong data-i18n="contact.hoursLabel">Orari</strong><span data-i18n="contact.hoursVal">Lun–Ven 08:00–17:00 · Sab 09:00–12:00</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <label>
+              <span data-i18n="form.name">Nome e cognome</span>
+              <input type="text" name="name" required placeholder="Mario Rossi" />
+            </label>
+            <label>
+              <span data-i18n="form.email">Email</span>
+              <input type="email" name="email" required placeholder="mario@esempio.ch" />
+            </label>
+            <label>
+              <span data-i18n="form.phone">Telefono</span>
+              <input type="tel" name="phone" placeholder="079 000 00 00" />
+            </label>
+            <label>
+              <span data-i18n="form.project">Tipo di progetto</span>
+              <select name="project">
+                <option value="" data-i18n="form.optSelect">Seleziona…</option>
+                <option data-i18n="serv.koi.t">Laghetto koi</option>
+                <option data-i18n="serv.bio.t">Biolago</option>
+                <option data-i18n="serv.pool.t">Biopiscina</option>
+                <option data-i18n="serv.reno.t">Ristrutturazione</option>
+                <option data-i18n="serv.maint.t">Manutenzione</option>
+                <option data-i18n="form.optOther">Altro</option>
+              </select>
+            </label>
+            <label>
+              <span data-i18n="form.message">Messaggio</span>
+              <textarea name="message" rows="4" data-i18n-placeholder="form.msgPh" placeholder="Descrivete brevemente la vostra idea…"></textarea>
+            </label>
+            <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button type="submit" class="btn btn-primary btn-block" data-i18n="form.submit">Invia richiesta</button>
+            <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <strong>Aqua Zone</strong> di Fabio Fontana
+          <p data-i18n="footer.tagline">Usiamo l'acqua per dare vita ai vostri sogni.</p>
+        </div>
+        <nav aria-label="Footer">
+          <a href="#servizi" data-i18n="nav.services">Servizi</a>
+          <a href="#chi-siamo" data-i18n="nav.about">Chi siamo</a>
+          <a href="#realizzazioni" data-i18n="nav.projects">Realizzazioni</a>
+          <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+        </nav>
+      </div>
+      <div class="footer-base">
+        <span>© <span id="year"></span> Aqua Zone — 6598 Tenero (CH)</span>
+        <span data-i18n="footer.cats">Laghetti Koi · Biolaghi · Biopiscine</span>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
