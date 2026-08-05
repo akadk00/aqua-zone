@@ -9,6 +9,15 @@ Rinnovo del sito aqua-zone.ch: single-page moderna con animazioni, 4 lingue (IT/
   python3 -m http.server 8000
   ```
 
+## Anteprima online
+**https://akadk00.github.io/aqua-zone/**
+
+Pubblicata con GitHub Pages dal branch `main` (repo `akadk00/aqua-zone`).
+Ogni `git push` su `main` aggiorna il sito dopo circa un minuto.
+
+La pagina ha un `noindex` nell'`<head>`: **non** finisce nei motori di ricerca,
+così non fa concorrenza al sito vero. Va tolto quando si va online per davvero.
+
 ## File
 - `index.html` — struttura e contenuti
 - `styles.css` — grafica e animazioni
