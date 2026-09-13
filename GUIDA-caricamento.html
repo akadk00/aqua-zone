@@ -1,0 +1,291 @@
+<title>Mettere online Aqua Zone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground: #e7e8e8;
+    --surface: #ffffff;
+    --surface-2: #f2f3f3;
+    --ink: #16181a;
+    --soft: #5c6265;
+    --line: #cdcfcf;
+    --red: #d8281c;
+    --red-soft: #fdeceb;
+    --ok: #2f6b4f;
+    --shadow: 0 1px 2px rgba(0,0,0,.05), 0 10px 26px -18px rgba(0,0,0,.35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #131516;
+      --surface: #1c1f20;
+      --surface-2: #232728;
+      --ink: #eceded;
+      --soft: #a3aaad;
+      --line: #343a3b;
+      --red: #ff5a4d;
+      --red-soft: #2a1917;
+      --ok: #6cbf96;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #131516;
+    --surface: #1c1f20;
+    --surface-2: #232728;
+    --ink: #eceded;
+    --soft: #a3aaad;
+    --line: #343a3b;
+    --red: #ff5a4d;
+    --red-soft: #2a1917;
+    --ok: #6cbf96;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.8);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font: 400 16px/1.65 "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px clamp(18px, 5vw, 32px) 80px; }
+
+  code, .path {
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    font-size: 0.88em;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 1px 6px;
+    white-space: nowrap;
+  }
+
+  /* ---------- testata ---------- */
+  .top { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .eyebrow {
+    font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--red); margin: 0 0 10px;
+  }
+  h1 {
+    font-family: "Fraunces", Georgia, serif; font-weight: 600;
+    font-size: clamp(2rem, 5.2vw, 2.9rem); line-height: 1.08; letter-spacing: -.02em;
+    margin: 0; text-wrap: balance;
+  }
+  .sub { color: var(--soft); margin: 14px 0 0; max-width: 60ch; }
+
+  .langs { display: flex; gap: 4px; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px; }
+  .langs button {
+    font: 600 12.5px/1 "Inter", sans-serif; letter-spacing: .06em;
+    border: 0; background: none; color: var(--soft); cursor: pointer;
+    padding: 7px 13px; border-radius: 999px;
+  }
+  .langs button[aria-pressed="true"] { background: var(--ink); color: var(--ground); }
+  .langs button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+  /* ---------- pannello di avvertimento ---------- */
+  .warn {
+    margin: 34px 0 0; padding: 22px 24px;
+    background: var(--red-soft); border: 1px solid var(--red); border-left-width: 4px;
+    border-radius: 10px;
+  }
+  .warn h2 {
+    font: 600 15px/1.3 "Inter", sans-serif; letter-spacing: .04em; text-transform: uppercase;
+    color: var(--red); margin: 0 0 10px;
+  }
+  .warn p { margin: 0 0 12px; }
+  .warn ul { margin: 0; padding-left: 20px; }
+  .warn li { margin: 5px 0; }
+  .warn li::marker { color: var(--red); }
+
+  /* ---------- passi ---------- */
+  h2.sec {
+    font-family: "Fraunces", Georgia, serif; font-weight: 600;
+    font-size: 1.5rem; letter-spacing: -.01em; margin: 48px 0 6px;
+  }
+  .sec-note { color: var(--soft); margin: 0 0 22px; font-size: 15px; }
+
+  ol.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; counter-reset: s; }
+  ol.steps > li {
+    counter-increment: s;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 18px 20px 18px 66px; position: relative; box-shadow: var(--shadow);
+  }
+  ol.steps > li::before {
+    content: counter(s, decimal-leading-zero);
+    position: absolute; left: 20px; top: 17px;
+    font-family: "IBM Plex Mono", monospace; font-size: 13px; font-weight: 500;
+    color: var(--red); letter-spacing: .04em;
+  }
+  ol.steps h3 { font: 600 16.5px/1.4 "Inter", sans-serif; margin: 0 0 5px; }
+  ol.steps p { margin: 0; color: var(--soft); font-size: 15px; }
+  ol.steps p + p { margin-top: 8px; }
+  .tick { color: var(--ok); font-weight: 600; }
+
+  /* ---------- risoluzione problemi ---------- */
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+  th, td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font: 600 12px/1.3 "Inter", sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--soft); }
+  tr:last-child td { border-bottom: 0; }
+
+  /* ---------- dopo ---------- */
+  .later { margin-top: 46px; padding: 22px 24px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; }
+  .later h2 { font: 600 15px/1.3 "Inter", sans-serif; letter-spacing: .04em; text-transform: uppercase; color: var(--soft); margin: 0 0 10px; }
+  .later p { margin: 0 0 10px; font-size: 15px; }
+  .later p:last-child { margin-bottom: 0; }
+
+  footer { margin-top: 40px; color: var(--soft); font-size: 13.5px; border-top: 1px solid var(--line); padding-top: 18px; }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+
+  <div class="top">
+    <div>
+      <p class="eyebrow" data-it="aqua-zone.ch &middot; SiteGround" data-en="aqua-zone.ch &middot; SiteGround">aqua-zone.ch · SiteGround</p>
+      <h1 data-it="Mettere online Aqua Zone" data-en="Putting Aqua Zone online">Mettere online Aqua Zone</h1>
+    </div>
+    <div class="langs" role="group" aria-label="Lingua / Language">
+      <button type="button" data-lang="it" aria-pressed="true">ITALIANO</button>
+      <button type="button" data-lang="en" aria-pressed="false">ENGLISH</button>
+    </div>
+  </div>
+
+  <p class="sub" data-it="Sul dominio c'&egrave; gi&agrave; il sito attuale di Fabio, fatto in Joomla, e funziona. Non lo tocchiamo. Carichiamo il sito nuovo in una cartella separata: i due convivono, e potete mostrarlo senza rischiare niente."
+     data-en="The domain already hosts Fabio's current site, built in Joomla, and it works. We leave it alone. We upload the new site into a separate folder: the two live side by side, and you can show it without risking anything.">Sul dominio c'è già il sito attuale di Fabio, fatto in Joomla, e funziona. Non lo tocchiamo. Carichiamo il sito nuovo in una cartella separata: i due convivono, e potete mostrarlo senza rischiare niente.</p>
+
+  <section class="warn">
+    <h2 data-it="Prima di tutto: cosa non fare" data-en="First of all: what not to do">Prima di tutto: cosa non fare</h2>
+    <p data-it="Dentro <code>public_html</code> c'&egrave; il sito attuale. Cancellare o spostare quei file lo manderebbe offline."
+       data-en="Inside <code>public_html</code> sits the current site. Deleting or moving those files would take it offline.">Dentro <code>public_html</code> c'è il sito attuale. Cancellare o spostare quei file lo manderebbe offline.</p>
+    <ul>
+      <li data-it="Non cancellate e non spostate nulla di quello che &egrave; gi&agrave; l&igrave;."
+          data-en="Do not delete and do not move anything that is already there.">Non cancellate e non spostate nulla di quello che è già lì.</li>
+      <li data-it="In particolare lasciate stare <code>index.php</code>, <code>.htaccess</code>, <code>administrator</code>, <code>components</code>, <code>includes</code>, <code>language</code>, <code>libraries</code>, <code>media</code>, <code>templates</code>."
+          data-en="In particular leave alone <code>index.php</code>, <code>.htaccess</code>, <code>administrator</code>, <code>components</code>, <code>includes</code>, <code>language</code>, <code>libraries</code>, <code>media</code>, <code>templates</code>.">In particolare lasciate stare <code>index.php</code>, <code>.htaccess</code>, <code>administrator</code>, <code>components</code>, <code>includes</code>, <code>language</code>, <code>libraries</code>, <code>media</code>, <code>templates</code>.</li>
+      <li data-it="Tutto quello che facciamo sta dentro una cartella nuova. Se un passaggio non torna, fermatevi e chiedetemi."
+          data-en="Everything we do stays inside one new folder. If a step doesn't match what you see, stop and ask me.">Tutto quello che facciamo sta dentro una cartella nuova. Se un passaggio non torna, fermatevi e chiedetemi.</li>
+    </ul>
+  </section>
+
+  <h2 class="sec" data-it="I passaggi" data-en="The steps">I passaggi</h2>
+  <p class="sec-note" data-it="Dieci minuti in tutto. Fateli nell'ordine."
+     data-en="Ten minutes in total. Follow them in order.">Dieci minuti in tutto. Fateli nell'ordine.</p>
+
+  <ol class="steps">
+    <li>
+      <h3 data-it="Fate un backup" data-en="Make a backup">Fate un backup</h3>
+      <p data-it="In Site Tools: <b>Sicurezza &rsaquo; Backup &rsaquo; Crea backup</b>. Aspettate il messaggio di conferma prima di andare avanti. Serve solo come rete di sicurezza."
+         data-en="In Site Tools: <b>Security &rsaquo; Backups &rsaquo; Create backup</b>. Wait for the confirmation message before moving on. It is only a safety net.">In Site Tools: <b>Sicurezza › Backup › Crea backup</b>. Aspettate il messaggio di conferma prima di andare avanti. Serve solo come rete di sicurezza.</p>
+    </li>
+    <li>
+      <h3 data-it="Aprite la Gestione file" data-en="Open the File Manager">Aprite la Gestione file</h3>
+      <p data-it="<b>Sito &rsaquo; Gestione file</b>, poi doppio clic su <code>public_html</code>. &Egrave; la cartella che il pubblico vede."
+         data-en="<b>Site &rsaquo; File Manager</b>, then double-click <code>public_html</code>. That folder is what the public sees.">Sito › Gestione file, poi doppio clic su <code>public_html</code>. È la cartella che il pubblico vede.</p>
+    </li>
+    <li>
+      <h3 data-it="Create la cartella nuova" data-en="Create the new folder">Create la cartella nuova</h3>
+      <p data-it="Cliccate l'icona <b>Nuova cartella</b> e chiamatela <code>nuovo</code>. Tutto minuscolo, senza spazi e senza accenti."
+         data-en="Click the <b>New folder</b> icon and name it <code>nuovo</code>. All lowercase, no spaces, no accents.">Cliccate l'icona <b>Nuova cartella</b> e chiamatela <code>nuovo</code>. Tutto minuscolo, senza spazi e senza accenti.</p>
+    </li>
+    <li>
+      <h3 data-it="Entrate dentro la cartella" data-en="Go inside that folder">Entrate dentro la cartella</h3>
+      <p data-it="Doppio clic su <code>nuovo</code>. <span class='tick'>Controllo:</span> in alto la riga deve dire <code>aqua-zone.ch &rsaquo; public_html &rsaquo; nuovo</code>. Se non c'&egrave; scritto <code>nuovo</code>, non siete dentro."
+         data-en="Double-click <code>nuovo</code>. <span class='tick'>Check:</span> the line at the top must read <code>aqua-zone.ch &rsaquo; public_html &rsaquo; nuovo</code>. If <code>nuovo</code> isn't there, you are not inside.">Doppio clic su <code>nuovo</code>. <span class="tick">Controllo:</span> in alto la riga deve dire <code>aqua-zone.ch › public_html › nuovo</code>. Se non c'è scritto <code>nuovo</code>, non siete dentro.</p>
+    </li>
+    <li>
+      <h3 data-it="Caricate il file zip" data-en="Upload the zip file">Caricate il file zip</h3>
+      <p data-it="Icona <b>Carica file</b>, scegliete <code>sito-online.zip</code> dal computer. Sono 6,7 MB: aspettate che la barra arrivi in fondo."
+         data-en="Click <b>Upload files</b> and pick <code>sito-online.zip</code> from your computer. It is 6.7 MB: wait for the bar to finish.">Icona <b>Carica file</b>, scegliete <code>sito-online.zip</code> dal computer. Sono 6,7 MB: aspettate che la barra arrivi in fondo.</p>
+    </li>
+    <li>
+      <h3 data-it="Estraete lo zip" data-en="Extract the zip">Estraete lo zip</h3>
+      <p data-it="Tasto destro sul file &rsaquo; <b>Estrai</b>. Quando chiede dove, confermate la cartella in cui siete gi&agrave;."
+         data-en="Right-click the file &rsaquo; <b>Extract</b>. When it asks where, confirm the folder you are already in.">Tasto destro sul file › <b>Estrai</b>. Quando chiede dove, confermate la cartella in cui siete già.</p>
+    </li>
+    <li>
+      <h3 data-it="Controllate cosa &egrave; uscito" data-en="Check what came out">Controllate cosa è uscito</h3>
+      <p data-it="<span class='tick'>Controllo:</span> dentro <code>nuovo</code> dovete vedere <code>index.html</code>, <code>servizio.html</code>, tre file di codice e la cartella <code>img</code>. Se invece vedete una sola cartella, entrateci e spostate il contenuto un livello sopra."
+         data-en="<span class='tick'>Check:</span> inside <code>nuovo</code> you should see <code>index.html</code>, <code>servizio.html</code>, three code files and the <code>img</code> folder. If instead you see a single folder, go in and move its contents one level up.">Controllo: dentro <code>nuovo</code> dovete vedere <code>index.html</code>, <code>servizio.html</code>, tre file di codice e la cartella <code>img</code>. Se invece vedete una sola cartella, entrateci e spostate il contenuto un livello sopra.</p>
+    </li>
+    <li>
+      <h3 data-it="Cancellate lo zip" data-en="Delete the zip">Cancellate lo zip</h3>
+      <p data-it="Solo il file <code>sito-online.zip</code>, che ormai non serve pi&ugrave;. Nient'altro."
+         data-en="Only the <code>sito-online.zip</code> file, which is no longer needed. Nothing else.">Solo il file <code>sito-online.zip</code>, che ormai non serve più. Nient'altro.</p>
+    </li>
+    <li>
+      <h3 data-it="Guardate il risultato" data-en="Look at the result">Guardate il risultato</h3>
+      <p data-it="Aprite <code>https://aqua-zone.ch/nuovo/</code> in una scheda nuova. Deve comparire il sito nuovo, con lo sfondo grigio chiaro e il titolo in rosso."
+         data-en="Open <code>https://aqua-zone.ch/nuovo/</code> in a new tab. The new site should appear, with the light grey background and the red heading.">Aprite <code>https://aqua-zone.ch/nuovo/</code> in una scheda nuova. Deve comparire il sito nuovo, con lo sfondo grigio chiaro e il titolo in rosso.</p>
+    </li>
+    <li>
+      <h3 data-it="Mandate il link a Fabio" data-en="Send the link to Fabio">Mandate il link a Fabio</h3>
+      <p data-it="&Egrave; quello: <code>https://aqua-zone.ch/nuovo/</code>. Si apre da qualsiasi telefono, senza account e senza password, ed &egrave; sul suo dominio."
+         data-en="That's the one: <code>https://aqua-zone.ch/nuovo/</code>. It opens on any phone, with no account and no password, and it lives on his own domain.">È quello: <code>https://aqua-zone.ch/nuovo/</code>. Si apre da qualsiasi telefono, senza account e senza password, ed è sul suo dominio.</p>
+    </li>
+  </ol>
+
+  <h2 class="sec" data-it="Se qualcosa non torna" data-en="If something looks wrong">Se qualcosa non torna</h2>
+  <p class="sec-note" data-it="I tre inciampi pi&ugrave; probabili, e cosa vogliono dire."
+     data-en="The three most likely stumbles, and what they mean.">I tre inciampi più probabili, e cosa vogliono dire.</p>
+
+  <div class="tablewrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-it="Cosa vedete" data-en="What you see">Cosa vedete</th>
+          <th data-it="Cosa significa" data-en="What it means">Cosa significa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-it="Pagina bianca oppure errore 404" data-en="Blank page or a 404 error">Pagina bianca oppure errore 404</td>
+          <td data-it="<code>index.html</code> non &egrave; dentro <code>nuovo</code>, o &egrave; finito in una sottocartella. Tornate al passo 7."
+              data-en="<code>index.html</code> is not inside <code>nuovo</code>, or it ended up in a subfolder. Go back to step 7."><code>index.html</code> non è dentro <code>nuovo</code>, o è finito in una sottocartella. Tornate al passo 7.</td>
+        </tr>
+        <tr>
+          <td data-it="Il testo c'&egrave; ma le foto no" data-en="Text shows but photos don't">Il testo c'è ma le foto no</td>
+          <td data-it="La cartella <code>img</code> non &egrave; accanto a <code>index.html</code>. Deve stare nello stesso posto."
+              data-en="The <code>img</code> folder is not next to <code>index.html</code>. It must sit in the same place.">La cartella <code>img</code> non è accanto a <code>index.html</code>. Deve stare nello stesso posto.</td>
+        </tr>
+        <tr>
+          <td data-it="Compare ancora il sito vecchio" data-en="The old site still appears">Compare ancora il sito vecchio</td>
+          <td data-it="Avete aperto <code>aqua-zone.ch</code> senza <code>/nuovo/</code> alla fine. &Egrave; giusto cos&igrave;: il sito attuale resta al suo posto."
+              data-en="You opened <code>aqua-zone.ch</code> without <code>/nuovo/</code> at the end. That is correct: the current site stays where it is.">Avete aperto <code>aqua-zone.ch</code> senza <code>/nuovo/</code> alla fine. È giusto così: il sito attuale resta al suo posto.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <section class="later">
+    <h2 data-it="Dopo, quando Fabio approva" data-en="Later, once Fabio approves">Dopo, quando Fabio approva</h2>
+    <p data-it="Per portare il sito nuovo all'indirizzo principale non fate da soli: si sposta il Joomla, si tolgono il suo <code>index.php</code> e il suo <code>.htaccess</code>, e prima vanno salvati gli iscritti alla newsletter AcyMailing. Ditemelo e lo prepariamo insieme."
+       data-en="Moving the new site to the main address is not a solo job: the Joomla install gets moved aside, its <code>index.php</code> and <code>.htaccess</code> are removed, and the AcyMailing newsletter subscribers must be exported first. Tell me and we'll prepare it together.">Per portare il sito nuovo all'indirizzo principale non fate da soli: si sposta il Joomla, si tolgono il suo <code>index.php</code> e il suo <code>.htaccess</code>, e prima vanno salvati gli iscritti alla newsletter AcyMailing. Ditemelo e lo prepariamo insieme.</p>
+    <p data-it="Due cose vanno fatte comunque, in quel momento: attivare il modulo contatti, con un primo invio e il clic sulla mail di conferma che arriva a aquazone.ch@gmail.com, e installare il certificato HTTPS da Sicurezza &rsaquo; SSL Manager."
+       data-en="Two things must be done at that point either way: activate the contact form, with one first submission and a click on the confirmation email sent to aquazone.ch@gmail.com, and install the HTTPS certificate under Security &rsaquo; SSL Manager.">Due cose vanno fatte comunque, in quel momento: attivare il modulo contatti, con un primo invio e il clic sulla mail di conferma che arriva a aquazone.ch@gmail.com, e installare il certificato HTTPS da Sicurezza › SSL Manager.</p>
+  </section>
+
+  <footer data-it="La cartella <code>nuovo</code> non &egrave; visibile a nessuno finch&eacute; non mandate voi il link. Nessun motore di ricerca la trova da solo in cos&igrave; poco tempo."
+          data-en="The <code>nuovo</code> folder is visible to no one until you send the link yourself. No search engine finds it on its own that quickly.">La cartella <code>nuovo</code> non è visibile a nessuno finché non mandate voi il link.</footer>
+
+</div>
+
+<script>
+  (function () {
+    var nodes = document.querySelectorAll("[data-it]");
+    var buttons = document.querySelectorAll(".langs button");
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      nodes.forEach(function (el) { el.innerHTML = el.getAttribute("data-" + lang); });
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener("click", function () { setLang(b.dataset.lang); });
+    });
+    setLang("it");
+  })();
+</script>

@@ -1,0 +1,175 @@
+<title>Lo scambio Aqua Zone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground:#e7e8e8; --surface:#fff; --surface-2:#f2f3f3;
+    --ink:#16181a; --soft:#5c6265; --line:#cdcfcf;
+    --red:#d8281c; --red-soft:#fdeceb; --ok:#2f6b4f; --ok-soft:#eaf3ee;
+    --shadow:0 1px 2px rgba(0,0,0,.05), 0 10px 26px -18px rgba(0,0,0,.35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground:#131516; --surface:#1c1f20; --surface-2:#232728;
+      --ink:#eceded; --soft:#a3aaad; --line:#343a3b;
+      --red:#ff5a4d; --red-soft:#2a1917; --ok:#6cbf96; --ok-soft:#17251e;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#131516; --surface:#1c1f20; --surface-2:#232728;
+    --ink:#eceded; --soft:#a3aaad; --line:#343a3b;
+    --red:#ff5a4d; --red-soft:#2a1917; --ok:#6cbf96; --ok-soft:#17251e;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.8);
+  }
+
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--ground); color:var(--ink);
+         font:400 16px/1.65 "Inter", system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:780px; margin:0 auto; padding:40px clamp(18px,5vw,32px) 80px; }
+
+  code { font-family:"IBM Plex Mono", ui-monospace, Menlo, monospace; font-size:.87em;
+         background:var(--surface-2); border:1px solid var(--line); border-radius:5px;
+         padding:1px 6px; white-space:nowrap; }
+
+  .top { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  .eyebrow { font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+             color:var(--red); margin:0 0 10px; }
+  h1 { font-family:"Fraunces", Georgia, serif; font-weight:600;
+       font-size:clamp(2rem,5.2vw,2.9rem); line-height:1.08; letter-spacing:-.02em; margin:0; text-wrap:balance; }
+  .sub { color:var(--soft); margin:14px 0 0; max-width:62ch; }
+
+  .langs { display:flex; gap:4px; background:var(--surface); border:1px solid var(--line);
+           border-radius:999px; padding:4px; }
+  .langs button { font:600 12.5px/1 "Inter",sans-serif; letter-spacing:.06em; border:0; background:none;
+                  color:var(--soft); cursor:pointer; padding:7px 13px; border-radius:999px; }
+  .langs button[aria-pressed="true"] { background:var(--ink); color:var(--ground); }
+  .langs button:focus-visible { outline:2px solid var(--red); outline-offset:2px; }
+
+  .panel { margin:32px 0 0; padding:22px 24px; border-radius:10px; border:1px solid var(--line); }
+  .panel.stop { background:var(--red-soft); border-color:var(--red); border-left-width:4px; }
+  .panel.calm { background:var(--surface-2); }
+  .panel h2 { font:600 15px/1.3 "Inter",sans-serif; letter-spacing:.04em; text-transform:uppercase; margin:0 0 10px; }
+  .panel.stop h2 { color:var(--red); }
+  .panel.calm h2 { color:var(--soft); }
+  .panel p { margin:0 0 11px; } .panel p:last-child { margin-bottom:0; }
+  .panel ul { margin:0; padding-left:20px; } .panel li { margin:5px 0; }
+  .panel.stop li::marker { color:var(--red); }
+
+  h2.sec { font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:1.5rem;
+           letter-spacing:-.01em; margin:46px 0 4px; }
+  .sec-note { color:var(--soft); margin:0 0 20px; font-size:15px; }
+
+  ol.steps { list-style:none; margin:0; padding:0; display:grid; gap:12px; counter-reset:s; }
+  ol.steps > li { counter-increment:s; background:var(--surface); border:1px solid var(--line);
+                  border-radius:10px; padding:18px 20px 18px 66px; position:relative; box-shadow:var(--shadow); }
+  ol.steps > li::before { content:counter(s,decimal-leading-zero); position:absolute; left:20px; top:17px;
+                          font-family:"IBM Plex Mono",monospace; font-size:13px; font-weight:500;
+                          color:var(--red); letter-spacing:.04em; }
+  ol.steps h3 { font:600 16.5px/1.4 "Inter",sans-serif; margin:0 0 5px; }
+  ol.steps p { margin:0; color:var(--soft); font-size:15px; }
+  .tick { color:var(--ok); font-weight:600; }
+
+  footer { margin-top:42px; color:var(--soft); font-size:13.5px; border-top:1px solid var(--line); padding-top:18px; }
+  @media (prefers-reduced-motion: reduce) { * { transition:none !important; } }
+</style>
+
+<div class="wrap">
+
+  <div class="top">
+    <div>
+      <p class="eyebrow">aqua-zone.ch &middot; SiteGround</p>
+      <h1 data-it="Lo scambio: il sito nuovo prende il posto del vecchio"
+          data-en="The swap: the new site takes the old one's place">Lo scambio: il sito nuovo prende il posto del vecchio</h1>
+    </div>
+    <div class="langs" role="group" aria-label="Lingua / Language">
+      <button type="button" data-lang="it" aria-pressed="true">ITALIANO</button>
+      <button type="button" data-lang="en" aria-pressed="false">ENGLISH</button>
+    </div>
+  </div>
+
+  <p class="sub" data-it="Non serve spostare le centinaia di file del Joomla. Ne bastano due rinominati: il sito vecchio resta dov'&egrave; ma smette di rispondere, e il nuovo prende il suo posto. Se qualcosa va storto si torna indietro in un minuto."
+     data-en="There is no need to move the hundreds of Joomla files. Two renames are enough: the old site stays where it is but stops answering, and the new one takes over. If anything goes wrong, one minute undoes it.">Non serve spostare le centinaia di file del Joomla. Ne bastano due rinominati.</p>
+
+  <section class="panel stop">
+    <h2 data-it="Da fare prima, non saltatelo" data-en="Do this first, do not skip it">Da fare prima, non saltatelo</h2>
+    <ul>
+      <li data-it="<b>Salvate gli iscritti alla newsletter.</b> Nel Joomla: <code>/administrator</code> &rsaquo; Componenti &rsaquo; AcyMailing &rsaquo; Iscritti &rsaquo; Esporta in CSV. Scaricate il file e tenetelo. Quella lista non esiste da nessun'altra parte."
+          data-en="<b>Export the newsletter subscribers.</b> In Joomla: <code>/administrator</code> &rsaquo; Components &rsaquo; AcyMailing &rsaquo; Subscribers &rsaquo; Export to CSV. Download the file and keep it. That list exists nowhere else."><b>Salvate gli iscritti alla newsletter.</b> Nel Joomla: <code>/administrator</code> › Componenti › AcyMailing › Iscritti › Esporta in CSV.</li>
+      <li data-it="<b>Le tre pagine legali.</b> Il sito vecchio ha condizioni generali, cookie policy e informativa privacy. Sul nuovo non ci sono ancora. Decidete con Fabio se rifarle prima dello scambio: sono obbligatorie o quasi, e mandare chi le cerca sulla home non &egrave; una soluzione."
+          data-en="<b>The three legal pages.</b> The old site has terms, a cookie policy and a privacy notice. The new one has none yet. Decide with Fabio whether to rewrite them before the swap: they are effectively mandatory, and sending readers to the homepage instead is not a fix."><b>Le tre pagine legali</b> del vecchio sito non esistono sul nuovo. Decidete con Fabio se rifarle prima.</li>
+      <li data-it="<b>Backup completo</b> da Sicurezza &rsaquo; Backup, e aspettate la conferma."
+          data-en="<b>Full backup</b> under Security &rsaquo; Backups, and wait for the confirmation."><b>Backup completo</b> da Sicurezza › Backup.</li>
+      <li data-it="Fatelo con calma, non di venerd&igrave; sera. Servono venti minuti."
+          data-en="Do it unhurried, not on a Friday evening. It takes twenty minutes.">Fatelo con calma, non di venerdì sera. Servono venti minuti.</li>
+    </ul>
+  </section>
+
+  <h2 class="sec" data-it="Lo scambio" data-en="The swap">Lo scambio</h2>
+  <p class="sec-note" data-it="Tutto dentro <code>public_html</code>, nella Gestione file."
+     data-en="All inside <code>public_html</code>, in the File Manager.">Tutto dentro <code>public_html</code>, nella Gestione file.</p>
+
+  <ol class="steps">
+    <li>
+      <h3 data-it="Spegnete il Joomla" data-en="Switch Joomla off">Spegnete il Joomla</h3>
+      <p data-it="Nella radice di <code>public_html</code> trovate <code>index.php</code>. Tasto destro &rsaquo; Rinomina &rsaquo; chiamatelo <code>index.php.spento</code>. Non cancellatelo: cos&igrave; il Joomla c'&egrave; ancora ma non risponde pi&ugrave;."
+         data-en="In the root of <code>public_html</code> find <code>index.php</code>. Right-click &rsaquo; Rename &rsaquo; call it <code>index.php.spento</code>. Do not delete it: Joomla is still there, it just stops answering.">Rinominate <code>index.php</code> in <code>index.php.spento</code>. Non cancellatelo.</p>
+    </li>
+    <li>
+      <h3 data-it="Mettete da parte il suo .htaccess" data-en="Set its .htaccess aside">Mettete da parte il suo .htaccess</h3>
+      <p data-it="Sempre nella radice, rinominate <code>.htaccess</code> in <code>htaccess-joomla.spento</code>. &Egrave; il file che governa gli indirizzi: se resta, interferisce."
+         data-en="In the same root, rename <code>.htaccess</code> to <code>htaccess-joomla.spento</code>. It is the file that governs URLs: if it stays, it interferes.">Rinominate <code>.htaccess</code> in <code>htaccess-joomla.spento</code>.</p>
+    </li>
+    <li>
+      <h3 data-it="Portate su il sito nuovo" data-en="Move the new site up">Portate su il sito nuovo</h3>
+      <p data-it="Entrate in <code>nuovo</code>, selezionate tutto — i cinque file e la cartella <code>img</code> — e usate Sposta con destinazione <code>/public_html</code>."
+         data-en="Go into <code>nuovo</code>, select everything — the five files and the <code>img</code> folder — and use Move with destination <code>/public_html</code>.">Da <code>nuovo</code> spostate i cinque file e la cartella <code>img</code> in <code>/public_html</code>.</p>
+    </li>
+    <li>
+      <h3 data-it="Caricate il nuovo .htaccess" data-en="Upload the new .htaccess">Caricate il nuovo .htaccess</h3>
+      <p data-it="Caricate <code>htaccess-da-rinominare.txt</code> nella radice, poi rinominatelo in <code>.htaccess</code> — con il punto davanti e senza <code>.txt</code>. Contiene i reindirizzamenti dai vecchi indirizzi e forza HTTPS."
+         data-en="Upload <code>htaccess-da-rinominare.txt</code> to the root, then rename it to <code>.htaccess</code> — with the leading dot and no <code>.txt</code>. It carries the redirects from the old URLs and forces HTTPS.">Caricate <code>htaccess-da-rinominare.txt</code> e rinominatelo <code>.htaccess</code>.</p>
+    </li>
+    <li>
+      <h3 data-it="Guardate il risultato" data-en="Check the result">Guardate il risultato</h3>
+      <p data-it="<span class='tick'>Controllo:</span> aprite <code>aqua-zone.ch</code> con Cmd+Shift+R. Deve comparire il sito nuovo. Poi provate <code>aqua-zone.ch/it/chi-siamo</code>: deve portarvi alla sezione Chi siamo del sito nuovo."
+         data-en="<span class='tick'>Check:</span> open <code>aqua-zone.ch</code> with Cmd+Shift+R. The new site must appear. Then try <code>aqua-zone.ch/it/chi-siamo</code>: it must land on the new site's About section."><span class="tick">Controllo:</span> <code>aqua-zone.ch</code> mostra il sito nuovo, e <code>/it/chi-siamo</code> porta alla sezione Chi siamo.</p>
+    </li>
+    <li>
+      <h3 data-it="Attivate il modulo contatti" data-en="Activate the contact form">Attivate il modulo contatti</h3>
+      <p data-it="Compilate il form del sito e inviatelo una volta. Arriva una mail di conferma a aquazone.ch@gmail.com: cliccate il link dentro. Finch&eacute; non lo fate, le richieste non vengono recapitate."
+         data-en="Fill in the site's form and send it once. A confirmation email arrives at aquazone.ch@gmail.com: click the link inside. Until you do, requests are not delivered.">Un invio di prova, poi il clic sulla mail di conferma a aquazone.ch@gmail.com.</p>
+    </li>
+    <li>
+      <h3 data-it="Certificato HTTPS" data-en="HTTPS certificate">Certificato HTTPS</h3>
+      <p data-it="Sicurezza &rsaquo; SSL Manager: installate Let's Encrypt sul dominio, poi attivate HTTPS Enforce."
+         data-en="Security &rsaquo; SSL Manager: install Let's Encrypt on the domain, then turn on HTTPS Enforce.">Sicurezza › SSL Manager: Let's Encrypt, poi HTTPS Enforce.</p>
+    </li>
+  </ol>
+
+  <section class="panel calm">
+    <h2 data-it="Se qualcosa va storto" data-en="If anything goes wrong">Se qualcosa va storto</h2>
+    <p data-it="Si torna indietro in un minuto, e senza perdere niente: cancellate il <code>.htaccess</code> nuovo, rinominate <code>htaccess-joomla.spento</code> di nuovo in <code>.htaccess</code>, e <code>index.php.spento</code> di nuovo in <code>index.php</code>. Il sito vecchio riparte esattamente com'era."
+       data-en="One minute undoes it, with nothing lost: delete the new <code>.htaccess</code>, rename <code>htaccess-joomla.spento</code> back to <code>.htaccess</code>, and <code>index.php.spento</code> back to <code>index.php</code>. The old site comes back exactly as it was.">Cancellate il <code>.htaccess</code> nuovo e rimettete i due nomi originali: il sito vecchio riparte com'era.</p>
+  </section>
+
+  <footer data-it="Un'ultima cosa, per dopo: il Joomla resta sul server, spento ma presente, ed &egrave; software non aggiornato. Una volta che il sito nuovo &egrave; assestato conviene rimuoverlo del tutto, tenendo il backup da parte."
+          data-en="One last thing, for later: Joomla stays on the server, switched off but present, and it is unmaintained software. Once the new site has settled, it is worth removing it entirely, keeping the backup aside.">Il Joomla resta sul server spento: quando il sito nuovo sarà assestato, conviene rimuoverlo del tutto.</footer>
+
+</div>
+
+<script>
+  (function () {
+    var nodes = document.querySelectorAll("[data-it]");
+    var buttons = document.querySelectorAll(".langs button");
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      nodes.forEach(function (el) { el.innerHTML = el.getAttribute("data-" + lang); });
+      buttons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+    }
+    buttons.forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+    setLang("it");
+  })();
+</script>

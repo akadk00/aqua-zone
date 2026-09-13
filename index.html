@@ -10,6 +10,25 @@
     />
     <!-- BOZZA: togliere questa riga quando il sito va online per davvero -->
     <meta name="robots" content="noindex, nofollow" />
+    <!-- Restringe cosa la pagina puo' caricare ed eseguire. Niente script o
+         stili inline nel sito, quindi non serve 'unsafe-inline'.
+         frame-ancestors e X-Frame-Options non sono applicabili via <meta>:
+         su GitHub Pages non si possono impostare header, quindi la protezione
+         contro l'incorniciamento arrivera' con l'hosting definitivo. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' https://fonts.googleapis.com;
+               font-src https://fonts.gstatic.com;
+               img-src 'self' data:;
+               connect-src https://formsubmit.co;
+               form-action 'self' https://formsubmit.co;
+               base-uri 'self';
+               object-src 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#d7d7d7" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,16 +41,10 @@
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
     <header class="site-header" id="siteHeader">
+
       <a class="brand" href="#hero" aria-label="Aqua Zone">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-            <path d="M12 2C12 2 5 9.5 5 14.5a7 7 0 0 0 14 0C19 9.5 12 2 12 2Z" fill="currentColor"/>
-          </svg>
-        </span>
-        <span class="brand-text">
-          <strong>Aqua Zone</strong>
-          <small>Koi Shop &amp; Ponds</small>
-        </span>
+        <img class="brand-logo brand-logo-scuro" src="img/logo-aqua-zone.svg" alt="" aria-hidden="true" />
+        <img class="brand-logo brand-logo-chiaro" src="img/logo-aqua-zone-su-chiaro.svg" alt="" aria-hidden="true" />
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Navigazione principale">
@@ -49,34 +62,30 @@
         <button type="button" data-lang="en">EN</button>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </header>
 
     <main>
       <!-- HERO -->
       <section class="hero" id="hero">
-        <div class="hero-bg" aria-hidden="true">
-          <img src="img/hero.jpg" alt="" />
+        <div class="hero-flow" aria-hidden="true">
+          <span class="flow-wave"></span>
         </div>
-        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="hero-content">
-          <span class="eyebrow reveal" data-i18n="hero.eyebrow">Tenero · Ticino · dal 1990</span>
-          <h1 class="reveal" data-i18n-html="hero.title">
+          <span class="eyebrow" data-i18n="hero.eyebrow">Tenero · Ticino · dal 2006</span>
+          <h1 data-i18n-html="hero.title">
             Usiamo l'acqua per dare vita ai <span class="accent">vostri sogni</span>
           </h1>
-          <p class="hero-lead reveal" data-i18n="hero.lead">
+          <p class="hero-lead" data-i18n="hero.lead">
             Laghetti koi, biolaghi e biopiscine realizzati su misura. Oltre trent'anni di passione,
-            dal primo laghetto fai-da-te a un giardino acquatico che diventa il cuore della vostra casa.
+            dal primo laghetto a un giardino acquatico che diventa il cuore della vostra casa.
           </p>
-          <div class="hero-actions reveal">
+          <div class="hero-actions">
             <a href="#realizzazioni" class="btn btn-primary" data-i18n="hero.cta1">Guarda le realizzazioni</a>
             <a href="#contatti" class="btn btn-ghost" data-i18n="hero.cta2">Richiedi un sopralluogo</a>
           </div>
-          <div class="hero-stats reveal">
+          <div class="hero-stats">
             <div><strong data-count="30" data-suffix="+">0</strong><span data-i18n="hero.stat1">anni di esperienza</span></div>
-            <div><strong data-count="250" data-suffix="+">0</strong><span data-i18n="hero.stat2">laghetti realizzati</span></div>
+            <div><strong data-count="100" data-suffix="+">0</strong><span data-i18n="hero.stat2">progetti realizzati</span></div>
             <div><strong data-count="100" data-suffix="%">0</strong><span data-i18n="hero.stat3">su misura</span></div>
           </div>
         </div>
@@ -87,7 +96,7 @@
       <section class="section" id="servizi">
         <div class="section-head reveal">
           <span class="kicker" data-i18n="serv.kicker">Cosa facciamo</span>
-          <h2 data-i18n="serv.title">Soluzioni d'acqua, su misura per voi</h2>
+          <h2 data-i18n="serv.title">Soluzioni su misura per voi</h2>
           <p data-i18n="serv.sub">Dalla progettazione alla manutenzione, seguiamo ogni fase con la cura di chi ha trasformato una passione in mestiere.</p>
         </div>
 
@@ -96,7 +105,7 @@
             <div class="card-photo"><img src="img/card-koi.jpg" alt="Laghetti koi" loading="lazy" /></div>
             <div class="card-body">
               <h3 data-i18n="serv.koi.t">Laghetti Koi</h3>
-              <p data-i18n="serv.koi.d">Lagune per carpe koi con filtraggio professionale e profondità ideale per esemplari sani e longevi.</p>
+              <p data-i18n="serv.koi.d">Laghetti per carpe koi con filtraggio professionale e profondità ideale per esemplari sani e longevi.</p>
               <span class="card-more" data-i18n="serv.more">Scopri di più →</span>
             </div>
           </a>
@@ -147,17 +156,17 @@
       <section class="section section-split" id="chi-siamo">
         <div class="split-media reveal">
           <div class="media-frame">
-            <img src="img/about.jpg" alt="Carpe koi in un laghetto realizzato da Aqua Zone" loading="lazy" />
+            <img src="img/about.jpg" alt="Un giardino acquatico realizzato da Aqua Zone" loading="lazy" />
           </div>
           <div class="media-badge">
             <strong>30+</strong>
-            <span data-i18n="about.badge">anni di<br />passione</span>
+            <span data-i18n-html="about.badge">anni di<br />passione</span>
           </div>
         </div>
         <div class="split-text reveal">
           <span class="kicker" data-i18n="about.kicker">Chi siamo</span>
           <h2 data-i18n="about.title">Una passione nata in giardino, cresciuta nel tempo</h2>
-          <p data-i18n="about.p1">Tutto è cominciato all'inizio degli anni '90, dal primo laghetto fai-da-te realizzato nel giardino di casa. Da lì, anno dopo anno, la passione per l'acqua e per le carpe koi è diventata un mestiere.</p>
+          <p data-i18n="about.p1">Tutto è cominciato nel 2006, dal primo laghetto realizzato nel giardino di casa. Da lì, anno dopo anno, la passione per l'acqua e per le carpe koi è diventata un mestiere.</p>
           <p data-i18n-html="about.p2">Oggi <strong>Aqua Zone di Fabio Fontana</strong> mette oltre trent'anni di esperienza al servizio di chi vuole un giardino acquatico curato in ogni dettaglio.</p>
           <ul class="checklist">
             <li data-i18n="about.li1">Progetti personalizzati, mai uguali</li>
@@ -177,8 +186,8 @@
 
         <div class="gallery">
           <figure class="gallery-item reveal" tabindex="0">
-            <img src="img/g1.jpg" alt="Laguna koi" loading="lazy" />
-            <figcaption><strong data-i18n="proj.g1t">Laguna Koi</strong><span data-i18n="proj.g1s">Filtraggio professionale</span></figcaption>
+            <img src="img/g1.jpg" alt="Laghetto koi" loading="lazy" />
+            <figcaption><strong data-i18n="proj.g1t">Laghetto Koi</strong><span data-i18n="proj.g1s">Filtraggio professionale</span></figcaption>
           </figure>
           <figure class="gallery-item reveal" tabindex="0">
             <img src="img/g2.jpg" alt="Biolago naturale" loading="lazy" />
@@ -210,28 +219,63 @@
           <span class="kicker" data-i18n="proc.kicker">Come lavoriamo</span>
           <h2 data-i18n="proc.title">Dal sogno alla realtà, in quattro passi</h2>
         </div>
-        <ol class="timeline">
-          <li class="reveal">
-            <span class="step-num">01</span>
-            <h3 data-i18n="proc.s1t">Sopralluogo</h3>
-            <p data-i18n="proc.s1d">Veniamo da voi per capire spazio, esigenze e desideri.</p>
-          </li>
-          <li class="reveal">
-            <span class="step-num">02</span>
-            <h3 data-i18n="proc.s2t">Progetto</h3>
-            <p data-i18n="proc.s2d">Proponiamo una soluzione su misura, con materiali e tempistiche chiare.</p>
-          </li>
-          <li class="reveal">
-            <span class="step-num">03</span>
-            <h3 data-i18n="proc.s3t">Realizzazione</h3>
-            <p data-i18n="proc.s3d">Costruiamo il vostro laghetto con cura artigianale, passo dopo passo.</p>
-          </li>
-          <li class="reveal">
-            <span class="step-num">04</span>
-            <h3 data-i18n="proc.s4t">Manutenzione</h3>
-            <p data-i18n="proc.s4d">Vi seguiamo nel tempo perché l'acqua resti sempre limpida e sana.</p>
-          </li>
-        </ol>
+        <div class="process reveal" id="process">
+          <div class="process-rail" role="tablist" aria-label="Fasi della realizzazione">
+            <span class="rail-line" aria-hidden="true"><i id="railFill"></i></span>
+
+            <button class="pstep is-active" role="tab" id="ptab0" aria-controls="ppanel0" aria-selected="true" data-step="0" data-img="img/step-1.jpg">
+              <!-- data-img: percorso della fotografia; se vuoto compare il riquadro tratteggiato -->
+              <span class="pshot" aria-hidden="true"><img src="img/step-1.jpg" alt="" loading="lazy" decoding="async" /><span class="pshot-empty">foto<br>da inserire</span></span>
+              <span class="pdot" aria-hidden="true"></span>
+              <em class="pnum">01</em>
+              <span class="plabel" data-i18n="proc.s1t">Sopralluogo</span>
+            </button>
+            <button class="pstep" role="tab" id="ptab1" aria-controls="ppanel1" aria-selected="false" tabindex="-1" data-step="1" data-img="img/step-2.jpg">
+              <!-- data-img: percorso della fotografia; se vuoto compare il riquadro tratteggiato -->
+              <span class="pshot" aria-hidden="true"><img src="img/step-2.jpg" alt="" loading="lazy" decoding="async" /><span class="pshot-empty">foto<br>da inserire</span></span>
+              <span class="pdot" aria-hidden="true"></span>
+              <em class="pnum">02</em>
+              <span class="plabel" data-i18n="proc.s2t">Progetto</span>
+            </button>
+            <button class="pstep" role="tab" id="ptab2" aria-controls="ppanel2" aria-selected="false" tabindex="-1" data-step="2" data-img="img/step-3.jpg">
+              <!-- data-img: percorso della fotografia; se vuoto compare il riquadro tratteggiato -->
+              <span class="pshot" aria-hidden="true"><img src="img/step-3.jpg" alt="" loading="lazy" decoding="async" /><span class="pshot-empty">foto<br>da inserire</span></span>
+              <span class="pdot" aria-hidden="true"></span>
+              <em class="pnum">03</em>
+              <span class="plabel" data-i18n="proc.s3t">Realizzazione</span>
+            </button>
+            <button class="pstep" role="tab" id="ptab3" aria-controls="ppanel3" aria-selected="false" tabindex="-1" data-step="3" data-img="img/step-4.jpg">
+              <!-- data-img: percorso della fotografia; se vuoto compare il riquadro tratteggiato -->
+              <span class="pshot" aria-hidden="true"><img src="img/step-4.jpg" alt="" loading="lazy" decoding="async" /><span class="pshot-empty">foto<br>da inserire</span></span>
+              <span class="pdot" aria-hidden="true"></span>
+              <em class="pnum">04</em>
+              <span class="plabel" data-i18n="proc.s4t">Manutenzione</span>
+            </button>
+          </div>
+
+          <div class="process-stage">
+            <article class="ppanel is-active" id="ppanel0" role="tabpanel" aria-labelledby="ptab0" data-panel="0">
+              <span class="pbig" aria-hidden="true">01</span>
+              <h3 data-i18n="proc.s1t">Sopralluogo</h3>
+              <p data-i18n="proc.s1d">Veniamo da voi per capire spazio, esigenze e desideri.</p>
+            </article>
+            <article class="ppanel" id="ppanel1" role="tabpanel" aria-labelledby="ptab1" data-panel="1" hidden>
+              <span class="pbig" aria-hidden="true">02</span>
+              <h3 data-i18n="proc.s2t">Progetto</h3>
+              <p data-i18n="proc.s2d">Proponiamo una soluzione su misura, con materiali e tempistiche chiare.</p>
+            </article>
+            <article class="ppanel" id="ppanel2" role="tabpanel" aria-labelledby="ptab2" data-panel="2" hidden>
+              <span class="pbig" aria-hidden="true">03</span>
+              <h3 data-i18n="proc.s3t">Realizzazione</h3>
+              <p data-i18n="proc.s3d">Costruiamo il vostro laghetto con cura artigianale, passo dopo passo.</p>
+            </article>
+            <article class="ppanel" id="ppanel3" role="tabpanel" aria-labelledby="ptab3" data-panel="3" hidden>
+              <span class="pbig" aria-hidden="true">04</span>
+              <h3 data-i18n="proc.s4t">Manutenzione</h3>
+              <p data-i18n="proc.s4d">Vi seguiamo nel tempo perché l'acqua resti sempre limpida e sana.</p>
+            </article>
+          </div>
+        </div>
       </section>
 
       <!-- CONTATTI -->
@@ -273,15 +317,15 @@
           <form class="contact-form reveal" id="contactForm" novalidate>
             <label>
               <span data-i18n="form.name">Nome e cognome</span>
-              <input type="text" name="name" required placeholder="Mario Rossi" />
+              <input type="text" name="name" autocomplete="name" required placeholder="Mario Rossi" />
             </label>
             <label>
               <span data-i18n="form.email">Email</span>
-              <input type="email" name="email" required placeholder="mario@esempio.ch" />
+              <input type="email" name="email" autocomplete="email" required placeholder="mario@esempio.ch" />
             </label>
             <label>
               <span data-i18n="form.phone">Telefono</span>
-              <input type="tel" name="phone" placeholder="079 000 00 00" />
+              <input type="tel" name="phone" autocomplete="tel" placeholder="079 000 00 00" />
             </label>
             <label>
               <span data-i18n="form.project">Tipo di progetto</span>

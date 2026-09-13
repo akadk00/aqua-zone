@@ -10,6 +10,25 @@
     />
     <!-- BOZZA: togliere questa riga quando il sito va online per davvero -->
     <meta name="robots" content="noindex, nofollow" />
+    <!-- Restringe cosa la pagina puo' caricare ed eseguire. Niente script o
+         stili inline nel sito, quindi non serve 'unsafe-inline'.
+         frame-ancestors e X-Frame-Options non sono applicabili via <meta>:
+         su GitHub Pages non si possono impostare header, quindi la protezione
+         contro l'incorniciamento arrivera' con l'hosting definitivo. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self';
+               style-src 'self' https://fonts.googleapis.com;
+               font-src https://fonts.gstatic.com;
+               img-src 'self' data:;
+               connect-src https://formsubmit.co;
+               form-action 'self' https://formsubmit.co;
+               base-uri 'self';
+               object-src 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#d7d7d7" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,16 +41,10 @@
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
     <header class="site-header scrolled" id="siteHeader">
+
       <a class="brand" href="index.html" aria-label="Aqua Zone">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-            <path d="M12 2C12 2 5 9.5 5 14.5a7 7 0 0 0 14 0C19 9.5 12 2 12 2Z" fill="currentColor"/>
-          </svg>
-        </span>
-        <span class="brand-text">
-          <strong>Aqua Zone</strong>
-          <small>Koi Shop &amp; Ponds</small>
-        </span>
+        <img class="brand-logo brand-logo-scuro" src="img/logo-aqua-zone.svg" alt="" aria-hidden="true" />
+        <img class="brand-logo brand-logo-chiaro" src="img/logo-aqua-zone-su-chiaro.svg" alt="" aria-hidden="true" />
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Navigazione principale">
@@ -49,9 +62,6 @@
         <button type="button" data-lang="en">EN</button>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </header>
 
     <main>

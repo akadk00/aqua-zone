@@ -53,56 +53,56 @@ const SERVICES = {
     card: "img/card-koi.jpg",
     it: {
       title: "Laghetti Koi",
-      lead: "Lagune su misura per carpe koi: acqua limpida, pesci sani e un angolo di Giappone nel vostro giardino.",
+      lead: "Laghetti su misura per le KOI, acqua limpida, pesci sani. Un angolo di Giappone nel vostro giardino.",
       heading: "Un habitat perfetto per le vostre koi",
-      p1: "Un laghetto per carpe koi non è un semplice specchio d'acqua: servono profondità corretta, volumi adeguati e una filtrazione professionale per garantire ai pesci un ambiente sano e stabile in ogni stagione. Progettiamo ogni laguna partendo dallo spazio disponibile e dal numero di esemplari che desiderate ospitare.",
+      p1: "Un laghetto per carpe koi non è un semplice specchio d'acqua: servono profondità corretta, volumi adeguati e una filtrazione professionale per garantire ai pesci un ambiente sano e stabile in ogni stagione. Progettiamo ogni laghetto partendo dallo spazio disponibile e dal numero di esemplari che desiderate ospitare.",
       p2: "Vi seguiamo dalla progettazione alla messa in acqua, fino all'introduzione dei primi pesci: consigli su alimentazione, quarantena dei nuovi arrivi e gestione dei valori dell'acqua. Con oltre trent'anni di esperienza sulle koi, sappiamo cosa serve perché crescano sane e longeve.",
       features: [
         "Progettazione su misura di forma, profondità e volumi",
-        "Filtri a tamburo e multicamera professionali",
-        "Skimmer, bottom drain e circolazione ottimale",
+        "Impianti di filtrazione autopulenti di ultima generazione a bassissima manutenzione",
+        "Studio dei flussi per una circolazione ottimale dell'acqua",
         "Sterilizzazione UV-C e ossigenazione dell'acqua",
         "Consulenza su scelta delle koi, alimentazione e quarantena",
       ],
     },
     de: {
       title: "Koiteiche",
-      lead: "Massgeschneiderte Lagunen für Kois: klares Wasser, gesunde Fische und ein Stück Japan in Ihrem Garten.",
+      lead: "Massgeschneiderte Teiche für KOI: klares Wasser, gesunde Fische. Ein Stück Japan in Ihrem Garten.",
       heading: "Ein perfekter Lebensraum für Ihre Kois",
-      p1: "Ein Koiteich ist mehr als eine Wasserfläche: Er braucht die richtige Tiefe, ausreichendes Volumen und eine professionelle Filterung, damit die Fische in jeder Jahreszeit ein gesundes, stabiles Umfeld haben. Wir planen jede Lagune ausgehend vom verfügbaren Platz und der gewünschten Anzahl Tiere.",
+      p1: "Ein Koiteich ist mehr als eine Wasserfläche: Er braucht die richtige Tiefe, ausreichendes Volumen und eine professionelle Filterung, damit die Fische in jeder Jahreszeit ein gesundes, stabiles Umfeld haben. Wir planen jeden Teich ausgehend vom verfügbaren Platz und der gewünschten Anzahl Tiere.",
       p2: "Wir begleiten Sie von der Planung über die Befüllung bis zum Einsetzen der ersten Fische: Beratung zu Fütterung, Quarantäne neuer Tiere und Wasserwerten. Mit über dreissig Jahren Koi-Erfahrung wissen wir, was gesunde, langlebige Tiere brauchen.",
       features: [
         "Massgeschneiderte Planung von Form, Tiefe und Volumen",
-        "Professionelle Trommel- und Mehrkammerfilter",
-        "Skimmer, Bodenablauf und optimale Zirkulation",
+        "Selbstreinigende Filteranlagen neuester Generation mit minimalem Pflegeaufwand",
+        "Strömungsplanung für eine optimale Wasserzirkulation",
         "UV-C-Sterilisation und Sauerstoffversorgung",
         "Beratung zu Koi-Auswahl, Fütterung und Quarantäne",
       ],
     },
     fr: {
       title: "Bassins à koïs",
-      lead: "Des lagunes sur mesure pour koïs : eau limpide, poissons sains et un coin de Japon dans votre jardin.",
+      lead: "Des bassins sur mesure pour les KOI : eau limpide, poissons sains. Un coin de Japon dans votre jardin.",
       heading: "Un habitat parfait pour vos koïs",
-      p1: "Un bassin à koïs n'est pas un simple plan d'eau : il faut une profondeur correcte, des volumes adaptés et une filtration professionnelle pour offrir aux poissons un environnement sain et stable en toute saison. Nous concevons chaque lagune à partir de l'espace disponible et du nombre de poissons souhaité.",
+      p1: "Un bassin à koïs n'est pas un simple plan d'eau : il faut une profondeur correcte, des volumes adaptés et une filtration professionnelle pour offrir aux poissons un environnement sain et stable en toute saison. Nous concevons chaque bassin à partir de l'espace disponible et du nombre de poissons souhaité.",
       p2: "Nous vous accompagnons de la conception à la mise en eau, jusqu'à l'introduction des premiers poissons : conseils sur l'alimentation, la quarantaine des nouveaux arrivants et la gestion des paramètres de l'eau. Avec plus de trente ans d'expérience, nous savons ce qu'il faut pour des koïs saines et durables.",
       features: [
         "Conception sur mesure de la forme, profondeur et volumes",
-        "Filtres à tambour et multichambres professionnels",
-        "Skimmer, bonde de fond et circulation optimale",
+        "Systèmes de filtration autonettoyants de dernière génération, à très faible entretien",
+        "Étude des flux pour une circulation optimale de l'eau",
         "Stérilisation UV-C et oxygénation de l'eau",
         "Conseils sur le choix des koïs, l'alimentation et la quarantaine",
       ],
     },
     en: {
       title: "Koi ponds",
-      lead: "Bespoke lagoons for koi carp: clear water, healthy fish and a corner of Japan in your garden.",
+      lead: "Bespoke ponds for KOI: clear water, healthy fish. A corner of Japan in your garden.",
       heading: "A perfect habitat for your koi",
-      p1: "A koi pond is more than a body of water: it needs the right depth, adequate volume and professional filtration to give the fish a healthy, stable environment in every season. We design each lagoon around the available space and the number of fish you wish to keep.",
+      p1: "A koi pond is more than a body of water: it needs the right depth, adequate volume and professional filtration to give the fish a healthy, stable environment in every season. We design each pond around the available space and the number of fish you wish to keep.",
       p2: "We follow you from design to filling, right up to introducing the first fish: advice on feeding, quarantining new arrivals and managing water parameters. With over thirty years of koi experience, we know what it takes for them to grow healthy and long-lived.",
       features: [
         "Bespoke design of shape, depth and volumes",
-        "Professional drum and multi-chamber filters",
-        "Skimmer, bottom drain and optimal circulation",
+        "Self-cleaning, latest-generation filtration systems with very low maintenance",
+        "Flow design for optimal water circulation",
         "UV-C sterilisation and water oxygenation",
         "Advice on koi selection, feeding and quarantine",
       ],
@@ -178,13 +178,13 @@ const SERVICES = {
       lead: "Il piacere di nuotare in acqua viva, pulita e senza cloro, in una piscina che sembra un laghetto naturale.",
       heading: "Nuotare nella natura, ogni giorno",
       p1: "La biopiscina unisce il piacere del nuoto alla bellezza di un laghetto naturale: l'acqua viene depurata dalle piante e dai substrati filtranti della zona di rigenerazione, senza cloro né altri prodotti chimici. Niente occhi arrossati, niente odori: solo acqua viva e morbida sulla pelle.",
-      p2: "Lo stile lo scegliete voi: dal look completamente naturale, con sponde verdi e pietre, al design più architettonico con linee pulite e bordi netti. Possiamo integrare riscaldamento, illuminazione e copertura per allungare la stagione di balneazione.",
+      p2: "Lo stile lo scegliete voi: dal look completamente naturale, con sponde verdi e pietre, al design più architettonico con linee pulite e bordi netti.",
       features: [
         "Acqua depurata naturalmente dalla zona di rigenerazione",
-        "Nessun cloro né prodotti chimici",
-        "Design naturale o architettonico, su misura",
-        "Riscaldamento, illuminazione e coperture opzionali",
-        "Manutenzione stagionale programmata",
+        "Nessun prodotto chimico",
+        "Design su misura, naturale o architettonico",
+        "Possibilità di riscaldamento e illuminazione",
+        "Servizio di manutenzione stagionale programmata",
       ],
     },
     de: {
@@ -192,13 +192,13 @@ const SERVICES = {
       lead: "Das Vergnügen, in lebendigem, sauberem Wasser ohne Chlor zu schwimmen – in einem Pool wie ein Naturteich.",
       heading: "Jeden Tag in der Natur schwimmen",
       p1: "Der Schwimmteich verbindet Badespass mit der Schönheit eines Naturteichs: Das Wasser wird von den Pflanzen und Filtersubstraten der Regenerationszone gereinigt – ohne Chlor und andere Chemikalien. Keine geröteten Augen, keine Gerüche: nur lebendiges, weiches Wasser auf der Haut.",
-      p2: "Den Stil bestimmen Sie: vom komplett natürlichen Look mit grünen Ufern und Steinen bis zum architektonischen Design mit klaren Linien und Kanten. Auf Wunsch integrieren wir Heizung, Beleuchtung und Abdeckung, um die Badesaison zu verlängern.",
+      p2: "Den Stil bestimmen Sie: vom komplett natürlichen Look mit grünen Ufern und Steinen bis zum architektonischen Design mit klaren Linien und Kanten.",
       features: [
         "Natürlich gereinigtes Wasser dank Regenerationszone",
-        "Kein Chlor, keine Chemikalien",
-        "Natürliches oder architektonisches Design, massgeschneidert",
-        "Optional Heizung, Beleuchtung und Abdeckung",
-        "Geplanter saisonaler Unterhalt",
+        "Keine Chemikalien",
+        "Massgeschneidertes Design, natürlich oder architektonisch",
+        "Möglichkeit von Heizung und Beleuchtung",
+        "Geplanter saisonaler Unterhaltsservice",
       ],
     },
     fr: {
@@ -206,13 +206,13 @@ const SERVICES = {
       lead: "Le plaisir de nager dans une eau vivante, propre et sans chlore, dans une piscine qui ressemble à un étang naturel.",
       heading: "Nager dans la nature, chaque jour",
       p1: "La piscine naturelle allie le plaisir de la nage à la beauté d'un étang : l'eau est épurée par les plantes et les substrats filtrants de la zone de régénération, sans chlore ni autres produits chimiques. Pas d'yeux rougis, pas d'odeurs : seulement une eau vivante et douce sur la peau.",
-      p2: "Le style, c'est vous qui le choisissez : du look entièrement naturel, avec berges vertes et pierres, au design plus architectural aux lignes épurées. Nous pouvons intégrer chauffage, éclairage et couverture pour prolonger la saison de baignade.",
+      p2: "Le style, c'est vous qui le choisissez : du look entièrement naturel, avec berges vertes et pierres, au design plus architectural aux lignes épurées.",
       features: [
         "Eau épurée naturellement par la zone de régénération",
-        "Ni chlore ni produits chimiques",
-        "Design naturel ou architectural, sur mesure",
-        "Chauffage, éclairage et couvertures en option",
-        "Entretien saisonnier planifié",
+        "Aucun produit chimique",
+        "Design sur mesure, naturel ou architectural",
+        "Possibilité de chauffage et d'éclairage",
+        "Service d'entretien saisonnier planifié",
       ],
     },
     en: {
@@ -220,13 +220,13 @@ const SERVICES = {
       lead: "The pleasure of swimming in living, clean, chlorine-free water, in a pool that looks like a natural pond.",
       heading: "Swim in nature, every day",
       p1: "A natural pool combines the joy of swimming with the beauty of a pond: the water is purified by the plants and filtering substrates of the regeneration zone, with no chlorine or other chemicals. No red eyes, no smells: just living, soft water on your skin.",
-      p2: "You choose the style: from a completely natural look with green banks and stones, to a more architectural design with clean lines and crisp edges. We can integrate heating, lighting and covers to extend the swimming season.",
+      p2: "You choose the style: from a completely natural look with green banks and stones, to a more architectural design with clean lines and crisp edges.",
       features: [
         "Water purified naturally by the regeneration zone",
-        "No chlorine, no chemicals",
-        "Natural or architectural design, made to measure",
-        "Optional heating, lighting and covers",
-        "Scheduled seasonal maintenance",
+        "No chemicals",
+        "Bespoke design, natural or architectural",
+        "Optional heating and lighting",
+        "Scheduled seasonal maintenance service",
       ],
     },
   },
@@ -236,58 +236,58 @@ const SERVICES = {
     card: "img/card-reno.jpg",
     it: {
       title: "Ristrutturazioni",
-      lead: "Il vostro laghetto ha perso smalto? Gli diamo nuova vita: impermeabilizzazione, forma e impianti.",
+      lead: "Il vostro laghetto ha perso smalto? Gli diamo nuova vita adeguando struttura e impianti di ultima generazione.",
       heading: "Nuova vita ai bacini esistenti",
       p1: "Perdite d'acqua, teli invecchiati, acqua sempre torbida o una forma che non vi convince più: sono i segnali che è ora di ristrutturare. Partiamo da un'analisi completa del bacino esistente per capire cosa tenere, cosa migliorare e cosa rifare.",
       p2: "Dalla nuova impermeabilizzazione in EPDM al ridisegno di forma, profondità e sponde, fino all'aggiornamento completo degli impianti: trasformiamo un laghetto stanco in uno specchio d'acqua di cui innamorarsi di nuovo, spesso riutilizzando quanto di buono già esiste.",
       features: [
         "Analisi completa del bacino esistente",
-        "Nuova impermeabilizzazione con telo EPDM",
-        "Ridisegno di forma, profondità e sponde",
+        "Nuova impermeabilizzazione",
+        "Ridisegno di forma, profondità e bordure",
         "Aggiornamento di pompe, filtri e impianti",
-        "Riqualificazione paesaggistica di bordi e dintorni",
+        "Riqualificazione paesaggistica",
       ],
     },
     de: {
       title: "Sanierungen",
-      lead: "Ihr Teich hat seinen Glanz verloren? Wir geben ihm neues Leben: Abdichtung, Form und Technik.",
+      lead: "Ihr Teich hat seinen Glanz verloren? Wir geben ihm neues Leben und bringen Struktur und Technik auf den neuesten Stand.",
       heading: "Neues Leben für bestehende Becken",
       p1: "Wasserverlust, gealterte Folien, dauerhaft trübes Wasser oder eine Form, die Ihnen nicht mehr gefällt: Das sind die Zeichen, dass eine Sanierung ansteht. Wir beginnen mit einer vollständigen Analyse des bestehenden Beckens, um zu klären, was bleibt, was verbessert und was erneuert wird.",
       p2: "Von der neuen EPDM-Abdichtung über die Neugestaltung von Form, Tiefe und Ufern bis zur kompletten Modernisierung der Technik: Wir verwandeln einen müden Teich in eine Wasserfläche, in die man sich neu verliebt – oft unter Wiederverwendung des Guten, das schon da ist.",
       features: [
         "Vollständige Analyse des bestehenden Beckens",
-        "Neue Abdichtung mit EPDM-Folie",
-        "Neugestaltung von Form, Tiefe und Ufern",
+        "Neue Abdichtung",
+        "Neugestaltung von Form, Tiefe und Einfassungen",
         "Modernisierung von Pumpen, Filtern und Technik",
-        "Landschaftliche Aufwertung von Rändern und Umgebung",
+        "Landschaftliche Aufwertung",
       ],
     },
     fr: {
       title: "Rénovations",
-      lead: "Votre bassin a perdu de son éclat ? Nous lui redonnons vie : étanchéité, forme et installations.",
+      lead: "Votre bassin a perdu de son éclat ? Nous lui redonnons vie en adaptant la structure et les installations de dernière génération.",
       heading: "Une nouvelle vie pour les bassins existants",
       p1: "Pertes d'eau, bâches vieillies, eau toujours trouble ou une forme qui ne vous plaît plus : ce sont les signes qu'il est temps de rénover. Nous commençons par une analyse complète du bassin existant pour décider ce qu'il faut garder, améliorer ou refaire.",
       p2: "De la nouvelle étanchéité en EPDM au redessin de la forme, de la profondeur et des berges, jusqu'à la mise à niveau complète des installations : nous transformons un bassin fatigué en un plan d'eau dont on retombe amoureux, souvent en réutilisant ce qui est encore bon.",
       features: [
         "Analyse complète du bassin existant",
-        "Nouvelle étanchéité avec bâche EPDM",
-        "Redessin de la forme, de la profondeur et des berges",
+        "Nouvelle étanchéité",
+        "Redessin de la forme, de la profondeur et des bordures",
         "Mise à niveau des pompes, filtres et installations",
-        "Requalification paysagère des abords",
+        "Requalification paysagère",
       ],
     },
     en: {
       title: "Renovations",
-      lead: "Has your pond lost its sparkle? We bring it back to life: waterproofing, shape and systems.",
+      lead: "Has your pond lost its sparkle? We bring it back to life, upgrading the structure and systems to the latest generation.",
       heading: "New life for existing basins",
       p1: "Water loss, ageing liners, permanently cloudy water or a shape you no longer love: these are the signs it's time to renovate. We start with a full analysis of the existing basin to decide what to keep, what to improve and what to rebuild.",
       p2: "From new EPDM waterproofing to redesigning shape, depth and banks, through to a complete upgrade of the systems: we turn a tired pond into a body of water to fall in love with again, often reusing what is still good.",
       features: [
         "Full analysis of the existing basin",
-        "New waterproofing with EPDM liner",
-        "Redesign of shape, depth and banks",
+        "New waterproofing",
+        "Redesign of shape, depth and edging",
         "Upgrade of pumps, filters and systems",
-        "Landscape restyling of edges and surroundings",
+        "Landscape restyling",
       ],
     },
   },
@@ -297,7 +297,7 @@ const SERVICES = {
     card: "img/card-filter.jpg",
     it: {
       title: "Sistemi di filtraggio",
-      lead: "Il cuore invisibile di ogni laghetto: impianti moderni per acqua limpida e poca manutenzione.",
+      lead: "Il cuore invisibile di ogni laghetto: impianti moderni per acqua limpida e bassa manutenzione.",
       heading: "Acqua limpida, tutto l'anno",
       p1: "Un buon sistema di filtraggio è la differenza tra un laghetto che vive e uno che sopravvive. Filtri a tamburo autopulenti, camere biologiche, sterilizzatori UV-C e pompe a basso consumo lavorano insieme per mantenere l'acqua limpida e sana, riducendo drasticamente gli interventi manuali.",
       p2: "Analizziamo il vostro impianto attuale e proponiamo l'aggiornamento più adatto: a volte basta ottimizzare quello che c'è, altre conviene ripensare la filtrazione da zero. In ogni caso, dimensioniamo l'impianto sul volume d'acqua e sul carico biologico reale del vostro laghetto.",
@@ -311,7 +311,7 @@ const SERVICES = {
     },
     de: {
       title: "Filtersysteme",
-      lead: "Das unsichtbare Herz jedes Teichs: moderne Anlagen für klares Wasser und wenig Pflegeaufwand.",
+      lead: "Das unsichtbare Herz jedes Teichs: moderne Anlagen für klares Wasser und geringen Pflegeaufwand.",
       heading: "Klares Wasser, das ganze Jahr",
       p1: "Ein gutes Filtersystem macht den Unterschied zwischen einem Teich, der lebt, und einem, der überlebt. Selbstreinigende Trommelfilter, Biokammern, UV-C-Sterilisatoren und sparsame Pumpen arbeiten zusammen, um das Wasser klar und gesund zu halten – und reduzieren die Handarbeit drastisch.",
       p2: "Wir analysieren Ihre bestehende Anlage und schlagen die passende Modernisierung vor: Manchmal genügt es, das Vorhandene zu optimieren, manchmal lohnt sich ein Neuaufbau der Filterung. In jedem Fall dimensionieren wir die Anlage nach Wasservolumen und tatsächlicher biologischer Last Ihres Teichs.",
@@ -325,7 +325,7 @@ const SERVICES = {
     },
     fr: {
       title: "Systèmes de filtration",
-      lead: "Le cœur invisible de chaque bassin : des installations modernes pour une eau limpide et peu d'entretien.",
+      lead: "Le cœur invisible de chaque bassin : des installations modernes pour une eau limpide et un faible entretien.",
       heading: "Une eau limpide, toute l'année",
       p1: "Un bon système de filtration fait la différence entre un bassin qui vit et un bassin qui survit. Filtres à tambour autonettoyants, chambres biologiques, stérilisateurs UV-C et pompes basse consommation travaillent ensemble pour garder une eau claire et saine, en réduisant fortement les interventions manuelles.",
       p2: "Nous analysons votre installation actuelle et proposons la mise à niveau la plus adaptée : parfois il suffit d'optimiser l'existant, parfois il vaut mieux repenser la filtration de zéro. Dans tous les cas, nous dimensionnons l'installation selon le volume d'eau et la charge biologique réelle de votre bassin.",
@@ -368,6 +368,7 @@ const SERVICES = {
         "Controllo periodico dei valori dell'acqua",
         "Cura di piante acquatiche e salute dei pesci",
         "Interventi rapidi in caso di guasti o anomalie",
+        "Contratti di manutenzione su misura",
       ],
     },
     de: {
@@ -382,6 +383,7 @@ const SERVICES = {
         "Regelmässige Kontrolle der Wasserwerte",
         "Pflege der Wasserpflanzen und Fischgesundheit",
         "Schnelle Einsätze bei Störungen oder Auffälligkeiten",
+        "Massgeschneiderte Unterhaltsverträge",
       ],
     },
     fr: {
@@ -396,6 +398,7 @@ const SERVICES = {
         "Contrôle périodique des paramètres de l'eau",
         "Soin des plantes aquatiques et de la santé des poissons",
         "Interventions rapides en cas de panne ou d'anomalie",
+        "Contrats d'entretien sur mesure",
       ],
     },
     en: {
@@ -410,6 +413,7 @@ const SERVICES = {
         "Regular checks of water parameters",
         "Care of aquatic plants and fish health",
         "Rapid call-outs for faults or anomalies",
+        "Bespoke maintenance contracts",
       ],
     },
   },
@@ -419,7 +423,13 @@ const SERVICE_ORDER = ["koi", "bio", "pool", "reno", "filter", "maint"];
 
 // ---- Stato ----
 const params = new URLSearchParams(location.search);
-const serviceKey = SERVICES[params.get("s")] ? params.get("s") : null;
+// SERVICES[chiave] risulta vero anche per "constructor", "__proto__",
+// "toString", "valueOf" e "hasOwnProperty": arrivano dal prototype, non sono
+// servizi, superavano il controllo e mandavano render() in errore lasciando la
+// pagina vuota senza nemmeno il rimando alla home. SERVICE_ORDER contiene solo
+// le sei chiavi reali.
+const requestedKey = params.get("s");
+const serviceKey = SERVICE_ORDER.indexOf(requestedKey) !== -1 ? requestedKey : null;
 if (!serviceKey) location.replace("index.html#servizi");
 
 let currentLang = (() => {
@@ -430,6 +440,13 @@ let currentLang = (() => {
 })();
 
 // ---- Render ----
+// Come nella home: il CSS legge --header-h per agganciare il riquadro laterale
+// sotto all'header e per lo scorrimento delle ancore.
+function syncHeaderHeight() {
+  const el = document.getElementById("siteHeader");
+  if (el) document.documentElement.style.setProperty("--header-h", el.offsetHeight + "px");
+}
+
 function render(lang) {
   currentLang = lang;
   const ui = UI[lang];
@@ -506,6 +523,7 @@ function render(lang) {
     b.classList.toggle("active", b.dataset.lang === lang)
   );
   try { localStorage.setItem("aquazone-lang", lang); } catch (e) {}
+  syncHeaderHeight();
 }
 
 if (serviceKey) render(currentLang);
@@ -528,21 +546,11 @@ function onScroll() {
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
-// ---- Mobile nav ----
-const navToggle = document.getElementById("navToggle");
-const mainNav = document.getElementById("mainNav");
-navToggle.addEventListener("click", () => {
-  const open = mainNav.classList.toggle("open");
-  navToggle.classList.toggle("open", open);
-  navToggle.setAttribute("aria-expanded", String(open));
-});
-mainNav.querySelectorAll("a").forEach((link) =>
-  link.addEventListener("click", () => {
-    mainNav.classList.remove("open");
-    navToggle.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
-  })
-);
+window.addEventListener("resize", syncHeaderHeight);
+syncHeaderHeight();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncHeaderHeight);
+
+// La navigazione e' sempre visibile: nessun pulsante di apertura.
 
 // ---- Scroll reveal ----
 const revealObserver = new IntersectionObserver(

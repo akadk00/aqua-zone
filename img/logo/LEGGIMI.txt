@@ -1,0 +1,19 @@
+LOGO AQUA-ZONE — elementi ritagliati senza sfondo
+=================================================
+Sorgenti: Progetti/aqua-zone/foto/Logo Ufficiale/{Logo.png, Logo onda.png}
+
+png-trasparente/   <- QUESTI sono i file da caricare sul sito
+  onda.png / @web.png                       onda ciano da sola
+  scritta.png / @web.png                    "Aqua-Zone"  (grigio -> BIANCO: per sfondi SCURI)
+  logo-completo.png / @web.png              onda + scritta versione per sfondi SCURI
+  scritta-su-chiaro.png / @web.png          "Aqua-Zone"  (grigio scuro: per sfondi CHIARI)
+  logo-completo-su-chiaro.png / @web.png    onda + scritta versione per sfondi CHIARI
+
+  senza suffisso = risoluzione piena (master, da archiviare)
+  @web           = 1600 px di larghezza, gia' pronto per il sito
+
+jpg-fondo-pieno/   <- solo se serve davvero un JPG
+  Il JPG NON supporta la trasparenza: ogni file e' appiattito su un fondo
+  (scuro per le versioni con testo bianco, bianco per le altre).
+
+Colori del marchio: vedi COLORI.md (HEX + equivalenze RAL)

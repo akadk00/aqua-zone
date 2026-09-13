@@ -1,0 +1,75 @@
+# ============================================================
+#  Aqua Zone - file .htaccess per il sito nuovo
+# ============================================================
+#  ATTENZIONE: questo file va messo nella radice di public_html
+#  SOLO al momento dello scambio, cioe' quando il sito nuovo
+#  prende il posto del Joomla. Va rinominato in  .htaccess
+#  (con il punto davanti e senza .txt).
+#
+#  Non metterlo adesso dentro la cartella /nuovo/: i
+#  reindirizzamenti qui sotto puntano alla radice del sito e
+#  finche' siamo in sottocartella farebbero danni.
+# ============================================================
+
+
+# ------------------------------------------------------------
+#  1. Tutto il traffico passa da HTTPS
+# ------------------------------------------------------------
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+
+# ------------------------------------------------------------
+#  2. Vecchi indirizzi del sito Joomla
+#
+#  Queste pagine erano online da anni e sono probabilmente
+#  presenti su Google. Senza queste righe, chi le trova
+#  atterrerebbe su una pagina inesistente.
+#  L'ordine conta: prima le pagine precise, poi le lingue.
+# ------------------------------------------------------------
+
+RedirectMatch 301 ^/it/chi-siamo/?$                    https://aqua-zone.ch/#chi-siamo
+RedirectMatch 301 ^/it/contatti/?$                     https://aqua-zone.ch/#contatti
+RedirectMatch 301 ^/it/contatti-dove-siamo/?$          https://aqua-zone.ch/#contatti
+RedirectMatch 301 ^/it/pond-ticino/?$                  https://aqua-zone.ch/#servizi
+
+#  Le home di lingua del vecchio sito
+RedirectMatch 301 ^/(it|de|fr|en)/?$                   https://aqua-zone.ch/
+
+#  NOTA: le tre pagine legali del vecchio sito
+#     /it/condizioni-generali
+#     /it/cookies-policy
+#     /it/informativa-sulla-privacy
+#  NON sono reindirizzate di proposito, perche' sul sito nuovo
+#  non esistono ancora. Vanno ricreate prima dello scambio:
+#  mandare la gente dalla privacy alla home peggiora le cose.
+
+
+# ------------------------------------------------------------
+#  3. Pagina di errore
+# ------------------------------------------------------------
+ErrorDocument 404 /index.html
+
+
+# ------------------------------------------------------------
+#  4. Il browser tiene in memoria immagini e stili
+#     (il sito diventa molto piu' veloce dalla seconda visita)
+# ------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg          "access plus 6 months"
+  ExpiresByType image/png           "access plus 6 months"
+  ExpiresByType image/webp          "access plus 6 months"
+  ExpiresByType text/css            "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/html           "access plus 1 hour"
+</IfModule>
+
+
+# ------------------------------------------------------------
+#  5. Compressione dei testi
+# ------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain application/javascript
+</IfModule>

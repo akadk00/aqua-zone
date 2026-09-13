@@ -1,2 +1,15 @@
 .claude/
 .DS_Store
+_build/
+__pycache__/
+
+# Materiale di lavoro che non deve finire online: il repo e' pubblico e
+# GitHub Pages serve la radice, quindi qualunque file committato qui dentro
+# diventa scaricabile da chiunque.
+foto/
+foto sito/
+
+# Copie e pacchetti generati, non sorgenti
+sito-online/
+sito-online.zip
+Aqua-Zone-anteprima.html
